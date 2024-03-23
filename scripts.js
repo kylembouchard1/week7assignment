@@ -19,9 +19,9 @@
     // c. Use a loop to iterate through the array and calculate the average age, 
     //          and print the average age out to the console.
     let average = 0;
-    for (let i = 0; i < ages.length; i++) {
-    average += ages[i];
-    }
+        for (let i = 0; i < ages.length; i++) {
+        average += ages[i];
+        }
     console.log(average/ages.length);
 
 // 2. Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
@@ -30,16 +30,16 @@
 
     // a. Use a loop to iterate through the array and calculate the average number of letters per name.
     let sumOfLetters = 0;
-    for (let i = 0; i < names.length; i++) {
+        for (let i = 0; i < names.length; i++) {
         sumOfLetters += names[i].length;
-    }
+        }
     console.log(sumOfLetters/names.length);
 
     // b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
     let stringOfNames = "";
-    for (let i = 0; i < names.length; i++) {
-    stringOfNames += names[i] + " ";
-    }
+        for (let i = 0; i < names.length; i++) {
+        stringOfNames += names[i] + " ";
+        }
     console.log(stringOfNames);
 
 // 3. How do you access the last element of any array?
@@ -62,54 +62,51 @@
 
 // 6. Write a loop to iterate over the nameLengths array and calculate the sum of all elements
     let sum = 0;
-    for (let i = 0; i < newNamesLengths.length; i++) {
-    sum += newNamesLengths[i];
+        for (let i = 0; i < newNamesLengths.length; i++) {
+        sum += newNamesLengths[i];
     }
 
 // Print the sum to the console
     console.log(sum);
 
 // 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
-function createString(word, num) {
-    let result = "";
-    for (let i = 0; i < num; i++) {
+    function createString(word, num) {
+        let result = "";
+        for (let i = 0; i < num; i++) {
         result += word;
-    }
+        }
 	return result;
-}
-
-console.log(createString(`Hello`,3));
+    }
+    console.log(createString(`Hello`,3));
 
 // 8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
-function getFullName(firstName, lastName) {
-    return firstName + ' ' + lastName;
-}
-const fullName = getFullName('John', 'Doe');
-console.log(fullName);
+    function getFullName(firstName, lastName) {
+        return firstName + ' ' + lastName;
+        }
+    const fullName = getFullName('John', 'Doe');
+    console.log(fullName);
 
 // 9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
-function greaterThanAHundred(array) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
+    function greaterThanAHundred(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
         sum += array[i];
-    }
-
+        }
     return (sum > 100);
-}
-const inputArray = [20, 30, 40, 15];
-const result = greaterThanAHundred(inputArray);
-console.log(greaterThanAHundred(inputArray));
+    }
+// I passed in values below to test
+    const inputArray = [20, 30, 40, 15];
+    const result = greaterThanAHundred(inputArray);
+    console.log(greaterThanAHundred(inputArray));
 
 // 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
-function calculateAverage(inputArray) {
-    let sum = 0;
-    for (let i = 0; i < inputArray.length; i++) {
+    function calculateAverage(inputArray) {
+        let sum = 0;
+        for (let i = 0; i < inputArray.length; i++) {
         sum += inputArray[i];
-    }
+        }
     return sum / inputArray.length;
-}
-
-
+    }
 let newResult = calculateAverage(inputArray);
 console.log(newResult);
 
@@ -120,6 +117,7 @@ function compareAverages(arr1, arr2) {
 
     return averageArr1 > averageArr2;
 }
+// I passed in values below to test
 const inputArrayOne = [20, 30, 40, 15];
 const inputArrayTwo = [10, 20, 30, 40, 50];
 console.log(compareAverages(inputArrayOne, inputArrayTwo));
@@ -131,6 +129,26 @@ function buyADrink(isHotOutside,moneyInPocket) {
     } 
     return false;
 }
-
-
 console.log(buyADrink(true, 10));
+
+// 13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+function isPrime(num) {
+   
+    if (num < 2) {
+        return false;
+    }
+    
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
+// I passed in values below to test
+const number = 17;
+const isNumberPrime = isPrime(number);
+console.log(isNumberPrime); 
